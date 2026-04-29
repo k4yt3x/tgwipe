@@ -2,6 +2,8 @@
 
 Wipe all of your messages from a Telegram group for everyone.
 
+<img width="1608" height="928" alt="screenshot" src="https://github.com/user-attachments/assets/5caae76f-ed7c-4217-93be-51a089fe9612" />
+
 Log in once with your phone, point it at a group, and it deletes every message you've sent there using the [Telethon](https://github.com/LonamiWebs/Telethon) MTProto client.
 
 ## Setup

@@ -26,12 +26,9 @@ class Cleaner:
 
     async def resolve_group(self, group_input: str) -> GroupEntity:
         target: str | int
-        if group_input.isdigit():
-            # Bare positive ID — assume supergroup/channel and add the -100 prefix.
-            target = int(f"-100{group_input}")
-        elif group_input.lstrip("-").isdigit():
+        try:
             target = int(group_input)
-        else:
+        except ValueError:
             target = group_input
         group = await self.client.get_entity(target)
         logger.info("Resolved group: {}", getattr(group, "title", group.id))

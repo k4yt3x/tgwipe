@@ -65,7 +65,7 @@ wheels = [
 ]
 
 [[package]]
-name = "tgamnesia"
+name = "tgwipe"
 source = { editable = "." }
 dependencies = [
     { name = "loguru" },

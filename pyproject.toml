@@ -1,0 +1,20 @@
+[project]
+name = "tgwipe"
+description = "Delete all of your messages from a Telegram group, for everyone"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "loguru>=0.7.3",
+    "telethon>=1.36",
+]
+dynamic = ["version"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "tgwipe/__init__.py"
+
+[project.scripts]
+tgwipe = "tgwipe.__main__:main"
